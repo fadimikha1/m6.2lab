@@ -1,79 +1,63 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Fancy letterheaded paper</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+    
+  </head>
+  <body>
 
-<head>
-  <meta charset="utf-8">
-  <title>Hello World!</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="shortcut icon" href="img/favicon.ico">
-</head>
+    
 
-<body>
-  <h1>HTML Rocks!</h1>
-  <p>
-    <button  onclick="helloWorld()">Prints Hello World to the Developer console</button>
-  </p>
-  <hr>
-  <form id="addForm">
-    <label for="num1">Number 1:</label>
-    <input type="number" id="num1" name="num1" required>
-    <br>
-    <label for="num2">Number 2:</label>
-    <input type="number" id="num2" name="num2" required>
-    <br>
-    <button type="submit">Add Numbers</button>
-  </form>
+    <article>
 
-  <label id="result">Result:</label>
+      <!-- Github copilot autocompleted most of these random texts, which i copy pasted from lipsum -->
+      <div class="content">
+        <div class="column">
 
-  <hr>
+            <h2>BLAH </h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec lectus nulla. Integer feugiat augue eu eros facilisis, in lacinia libero tempor.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec lectus nulla. Integer feugiat augue eu eros facilisis, in lacinia libero tempor.</p>
+            <h3>BLAH</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec lectus nulla. Integer feugiat augue eu eros facilisis, in lacinia libero tempor.</p>
 
-  <button id="jokeButton">Get a Random Joke</button>
-  <p id="joke"></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec lectus nulla. Integer feugiat augue eu eros facilisis, in lacinia libero tempor.</p>
 
-  <script type="module" script="js/main.js">
-    import {helloWorld, add, fetchRandomJoke} from './js/main.js';
+            <p>Curabitur nec diam non nisi venenatis laoreet. Donec venenatis odio ut lectus blandit, non vulputate nisl molestie.</p>
+        </div>
+        <div class="column">
+          <h2>BLAH</h2>
+            <p>Phasellus fringilla diam nec ligula dapibus, at facilisis lectus ultrices. Donec eget tortor ut turpis volutpat varius.</p>
+            <p>Phasellus fringilla diam nec ligula dapibus, at facilisis lectus ultrices. Donec eget tortor ut turpis volutpat varius.</p>
 
-    // This shows how to assign a function to the window object
-    // so that it can be called from the browser console
-    window.helloWorld = helloWorld;
+            <p>Phasellus fringilla diam nec ligula dapibus, at facilisis lectus ultrices. Donec eget tortor ut turpis volutpat varius.</p>
+            <h3>BLAH</h3>
+            <p>Phasellus fringilla diam nec ligula dapibus, at facilisis lectus ultrices. Donec eget tortor ut turpis volutpat varius.</p>
+            <p>Phasellus fringilla diam nec ligula dapibus, at facilisis lectus ultrices. Donec eget tortor ut turpis volutpat varius.</p>
 
-    // This shows how to add an event listener to a button in the HTML
-    // and call a function when the button is clicked
-    const form = document.getElementById('addForm');
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const num1 = parseFloat(document.getElementById('num1').value);
-      const num2 = parseFloat(document.getElementById('num2').value);
-      try{
-        const result = add(num1, num2);
-        document.getElementById('result').textContent = `Result: ${result}`;
-      }catch(e){
-        console.error(e);
-        document.getElementById('result').textContent = `Error: ${e.message}`;
-      }
+            <p>Vestibulum faucibus mi et neque tempus, ut venenatis ex malesuada.</p>
+            <form>
+              <!-- Chatgpt/ https://www.w3schools.com/tags/att_input_type_radio.asp#:~:text=The%20%3Cinput%20type%3D%22radio,selected%20at%20the%20same%20time. helped me to figure out the radio button calls. -->
+              <label><input type="radio" name="option" value="I dont really like buttons1"> Button#Uno</label><br>
+              <label><input type="radio" name="option" value="I dont really like buttons-But thatsok"> Button#WHY BUTTONS HEHE</label><br>
 
-    });
+              <button type="button" onclick="displaySelection()">Submit</button>
+            </form>
+        </div>
+      </div>
 
-    // this shows how to add an event listener to a button in the HTML
-    // that calls a function that fetches a random joke from an API
-    // and displays it on the page
-    const jokebtn = document.getElementById('jokeButton');
-    const jokeresult = document.getElementById('joke');
-    jokebtn.addEventListener('click', async () => {
-      try {
-        jokeresult.textContent = 'Loading...';
-        const joke = await fetchRandomJoke();
-        document.getElementById('joke').textContent = joke;
-      } catch (e) {
-        console.error(e);
-        document.getElementById('joke').textContent = `Error: ${e.message}`;
-      }
-    });
-  </script>
-
-</body>
-
+      <h1>Awesome<br>Company</h1>
+      <address>
+        <p>The Awesome Company</p>
+        <p>102-112 Frail Bend Bridge<br>
+        The Dwindlings<br>
+        Little Hornet<br>
+        HX3 9ZQ<br>
+        UK</p>
+      </address>
+    </article>
+  </body>
 </html>

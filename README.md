@@ -27,3 +27,6 @@ To run the tests for the project, run the following command:
 ```bash
 npm test
 ```
+
+## Running
+To run this site, simply clone the repositiory that this code is located in, launch vs code, and then click to run vscode's live preview server.
